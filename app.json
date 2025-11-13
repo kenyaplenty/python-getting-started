@@ -1,0 +1,32 @@
+{
+  "addons": [
+    "herokai-metered-billing",
+    "heroku-inference",
+    "scheduler"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "INFERENCE_KEY": {
+      "required": true
+    },
+    "INFERENCE_MODEL_ID": {
+      "required": true
+    },
+    "INFERENCE_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "python-getting-started",
+  "scripts": {
+  },
+  "stack": "heroku-24"
+}
